@@ -1,0 +1,161 @@
+.hero {
+    height: 76vh;
+    width: 100vw;
+    background-image: url("../images/HeroImage.png");
+    background-size: cover;
+    background-position-y: 0vh;
+    background-position-x: -66vw;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagline {
+    font-family: "Syncopate", sans-serif;
+    margin-left: 42vw;
+    font-size: 4vh;
+    font-weight: 700;
+    color: #f8f783;
+    margin-top: 8vh;
+}
+
+a, a:hover, a:visited, a:active {
+    color: inherit
+}
+.aboutPage {
+    background: #f8f783;
+    height: 76vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutImage {
+    height: 100%;
+    width: 103.8%;
+    background-image: url("../images/aboutme.png");
+    background-size: cover;
+}
+
+.welcome {
+    width: 100%;
+    text-align: right;
+}
+.aboutMe {
+    width: 84%;
+    text-align: justify;
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    align-self: flex-end;
+    line-height: 3vh;
+    margin-top: 2vh;
+    margin-right: 1vw;
+}
+
+.aboutInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.skills {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+}
+
+.skills ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    display: inline;
+    width: 33%;
+    text-align: center;
+    margin: 1vh 0;
+    font-size: 3vh;
+}
+
+.skills h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 4vh;
+    color: #c86360;
+    text-decoration: underline;
+    margin-bottom: 2vh;
+}
+
+
+
+.languages {
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+}
+
+.languages ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.languages li {
+    display: inline;
+    width: 25%;
+    text-align: center;
+    margin: 1vh 0;
+    font-size: 4vh;
+}
+
+.languages h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 6vh;
+    color: #c86360;
+    text-decoration: underline;
+    margin-bottom: 2vh;
+}
+
+.header .projectsTitle {
+    width: 69vw;
+    font-size: 3.4vh;
+}
+
+@media only screen and (min-width: 568px) {
+    .header .projectsTitle {
+        width: 69vw;
+        font-size: 9.4vh;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero {
+        background-position-x: -37vw;
+        background-position-y: 0vh;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .hero {
+        background-position-x: 0;
+        background-position-y: 0vh;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    .hero {
+        background-position-x: 0;
+        background-position-y: 0vh;
+    }
+
+}
+
+@media only screen and (min-width: 1440px) {
+    .hero {
+        background-position-x: 0;
+        background-position-y: -27vh;
+    }
+
+
+
+}

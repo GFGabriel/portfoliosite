@@ -1,0 +1,283 @@
+.header {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #c86360;
+}
+
+.logo {
+    background-image: url("../images/redLogo.png");
+    /*height: 15vh;*/
+    /*width: 16vh;*/
+    /*background-size: cover;*/
+    /*margin-left: 3vw;*/
+    height: 12vh;
+    width: 13vh;
+    background-size: cover;
+    margin-top: 1.2vh;
+    margin-left: 0.6vw;
+
+}
+
+.header h1 {
+    font-family: 'Syncopate', sans-serif;
+    font-weight: 700;
+    font-size: 4.4vh;
+    margin-top: 3vh;
+    width: 66vw;
+    color: #f8f783;
+}
+
+.nav-trigger {
+    position: fixed;
+    width: 110px;
+    height: 98px;
+    right: 0;
+    top: 2.5vh;
+    cursor: pointer;
+    z-index: 200;
+    -webkit-transform-origin: 110px 0px;
+    -moz-transform-origin: 110px 0px;
+    -ms-transform-origin: 110px 0px;
+    -o-transform-origin: 110px 0px;
+    transform-origin: 110px 0px;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transition: background 0.3s linear;
+    -moz-transition: background 0.3s linear;
+    transition: background 0.3s linear;
+}
+
+.nav-trigger.open {
+    background: #c86360;
+}
+
+.nav-trigger.close {
+    background: transparent;
+}
+
+.line {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 8px;
+    background: #f8f783;
+    left: 15px;
+    -webkit-transform-origin: 0px 4px;
+    -moz-transform-origin: 0px 4px;
+    -ms-transform-origin: 0px 4px;
+    -o-transform-origin: 0px 4px;
+    transform-origin: 0px 4px;
+    -webkit-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -webkit-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    -moz-transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, -moz-transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.24s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.line:nth-child(1) {
+    top: 16px;
+}
+
+.line:nth-child(2) {
+    top: 44px;
+}
+
+.line:nth-child(3) {
+    top: 72px;
+}
+
+.close .line:nth-child(1) {
+    -webkit-transform: translateX(11px) rotate(45deg);
+    -moz-transform: translateX(11px) rotate(45deg);
+    -ms-transform: translateX(11px) rotate(45deg);
+    -o-transform: translateX(11px) rotate(45deg);
+    transform: translateX(11px) rotate(45deg);
+}
+
+.close .line:nth-child(2) {
+    opacity: 0;
+}
+
+.close .line:nth-child(3) {
+    -webkit-transform: translateX(11px) rotate(-45deg);
+    -moz-transform: translateX(11px) rotate(-45deg);
+    -ms-transform: translateX(11px) rotate(-45deg);
+    -o-transform: translateX(11px) rotate(-45deg);
+    transform: translateX(11px) rotate(-45deg);
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+nav.out {
+    pointer-events: none;
+}
+
+nav.in {
+    pointer-events: auto;
+}
+
+nav ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+nav ul {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+nav li {
+    height: 20%;
+    position: relative;
+    background: #c86360;
+    color: #f8f783;
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-size: 7vh;
+}
+
+nav li:hover {
+    background: #272c9d;
+}
+
+nav.in li:nth-child(1) {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s, opacity 0.5s linear 0.1s;
+}
+
+nav.in li:nth-child(2) {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, opacity 0.5s linear 0.2s;
+}
+
+nav.in li:nth-child(3) {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, opacity 0.5s linear 0.3s;
+}
+
+nav.in li:nth-child(4) {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s, opacity 0.5s linear 0.4s;
+}
+
+nav.in li:nth-child(5) {
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+    -moz-transition: -moz-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s, opacity 0.5s linear 0.5s;
+}
+
+nav.out li:nth-child(5) {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s, opacity 0.3s linear 0s;
+}
+
+nav.out li:nth-child(4) {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.05s, opacity 0.3s linear 0.05s;
+}
+
+nav.out li:nth-child(3) {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.1s, opacity 0.3s linear 0.1s;
+}
+
+nav.out li:nth-child(2) {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.15s, opacity 0.3s linear 0.15s;
+}
+
+nav.out li:nth-child(1) {
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+    transition: transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.2s, opacity 0.3s linear 0.2s;
+}
+
+nav.out li {
+    -webkit-transform: translateY(300%);
+    -moz-transform: translateY(300%);
+    -ms-transform: translateY(300%);
+    -o-transform: translateY(300%);
+    transform: translateY(300%);
+    opacity: 0;
+}
+
+nav.in li {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.nav-label {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    top: 50%;
+    margin-top: -4vh;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .header h1 {
+        font-size: 4em;
+        margin-top: 2vh;
+        margin-right: 2vw;
+    }
+
+    .nav-trigger {
+        top: 4.3vh;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .header h1 {
+        font-size: 3.5em;
+        margin-top: 4vh;
+        margin-right: 12vw;
+    }
+
+    .nav-trigger {
+        top: 4vh;
+    }
+
+}
+
+@media only screen and (min-width: 1366px) {
+
+    .header h1 {
+        font-size: 4.5em;
+        margin-right: 11vw;
+    }
+
+    .nav-trigger {
+        top: 4vh;
+    }
+
+}
